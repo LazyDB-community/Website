@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TVZPCX8");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+    <title>Lazy DB</title>
+  </head>
+  <body onload="emphasize()">
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TVZPCX8"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden;"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="navigation-bar">
+      <div class="navigation-content">
+        <div class="logo">
+          <h2>Lazy DB</h2>
+        </div>
+        <div class="navigation-items">
+          <ul>
+            <li class="slidem"><a href="#features">Features</a></li>
+            <li class="slidem"><a href="./doc">Documentation</a></li>
+            <li class="slidem"><a href="https://discord.gg/3jf5n4J">Discord</a></li>
+          </ul>
+        </div>
+        <div class="hamburger-menu" onclick="showNav()">
+          <i class="fas fa-bars fa-2x" style="color: white;"></i>
+        </div>
+      </div>
+    </nav>
+    <section class="db-introduction">
+      <div class="title">
+        <h1 class="main-heading">
+          What is <span style="color: white;">Lazy DB</span>?
+        </h1>
+        <p class="subtitle">
+          <span class="special">Lazy DB </span>is an all in one realtime
+          database, build for making great web, mobile or desktop apps!
+        </p>
+        <p class="subtitle">
+          Designed for <span class="special abilities">scalability</span>,
+          <span class="special abilities">simplicity</span> and
+          <span class="special abilities">efficiency</span>
+        </p>
+        <button class="btn"><a href="./doc">DOCUMENTAION</a></button>
+        <button class="btn cta"><a href="https://discord.gg/3jf5n4J">DISCORD</a></button>
+      </div>
+    </section>
+    <hr />
+    <section class="features" id="features">
+      <div class="introduce">
+        <h1 class="heading">
+          FEATURES
+        </h1>
+      </div>
+      <div class="feature">
+        <div class="card">
+          <h1>Real Time Collaboration</h1>
+          <p>
+            Manage your projects and teams in real time in our amazing web app.
+          </p>
+        </div>
+        <div class="card-img">
+          <img src="images/rt.gif" alt="" />
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="card-img" id="second-img">
+          <img src="images/rt_code.gif" alt="" />
+        </div>
+        <div class="card" id="second-card">
+          <h2>Real Time Code-editing</h2>
+          <p>
+            Work together with our real-time collaborative code editor, built
+            with Monaco Editor.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="card">
+          <h1>Powerful Explorer</h1>
+          <p>
+            Manage your data easily in our simple to use web app. And add, edit
+            or delete data in real-time.
+          </p>
+        </div>
+        <div class="card-img">
+          <img src="images/data_explorer.gif" alt="" />
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section class="carousel">
+      <div class="left-arrow" onclick="previous()">
+        <i class="fas fa-chevron-left fa-2x" style="color: white;"></i>
+      </div>
+      <div class="information-card" id="card1">
+        <h2>Integrated Hosting</h2>
+        <p>
+          Once your website or webapp is ready, publish it in one click. Then
+          add your custom domain name and create emails adresses on your domain!
+        </p>
+      </div>
+      <div class="information-card inactive" id="card2">
+        <h2>Lua Scripting</h2>
+        <p>
+          Need more functionality? Create your cloud functions in LUA directly
+          on your admin panel!
+        </p>
+      </div>
+      <div class="information-card inactive" id="card3">
+        <h2>Automatic Emails</h2>
+        <p>
+          Simply send emails based on event, or trigger it via your LUA cloud
+          function.
+        </p>
+      </div>
+      <div class="right-arrow" onclick="next()">
+        <i class="fas fa-chevron-right fa-2x" style="color: white;"></i>
+      </div>
+    </section>
+    <section>
+      <div class="footer">
+          <a href="/" class="slidem">Lazy DB</a>
+          <a href="legal_terms.html" class="slidem">Legal Terms</a>
+          <a href="mailto:contact@lazydb.com" class="slidem">Contact Us</a>
+          <a href="https://twitter.com/lazydb2" class="slidem">Twitter
+          <a href="https://discord.gg/3jf5n4J" class="slidem">Discord</a>
+      </div>
+    </section>
+    <!-- Script  -->
+    <script>
+      function emphasize() {
+        for (let word of document.querySelectorAll(".abilities")) {
+          word.classList.add("slide");
+        }
+        var body = document.getElementsByTagName("SECTION")
+        for (let tag of body){
+          tag.addEventListener("click", function(){
+          var menu = document.getElementsByClassName("navigation-items")[0]
+          menu.classList.remove("show");
+        })
+        }
+      }
+
+      var x = 0;
+      function next() {
+        x++;
+        if (x == 1) {
+          document.getElementById("card2").classList.remove("inactive");
+          document.getElementById("card1").classList.add("inactive");
+          document.getElementById("card3").classList.add("inactive");
+        } else if (x == 2) {
+          document.getElementById("card2").classList.add("inactive");
+          document.getElementById("card3").classList.remove("inactive");
+          document.getElementById("card1").classList.add("inactive");
+        } else if (x == 0) {
+          document.getElementById("card1").classList.remove("inactive");
+          document.getElementById("card2").classList.add("inactive");
+          document.getElementById("card3").classList.add("inactive");
+        } else {
+          x = -1;
+          next();
+        }
+      }
+
+      function previous() {
+        x--;
+        if (x == 1) {
+          document.getElementById("card2").classList.remove("inactive");
+          document.getElementById("card1").classList.add("inactive");
+          document.getElementById("card3").classList.add("inactive");
+        } else if (x == 2) {
+          document.getElementById("card2").classList.add("inactive");
+          document.getElementById("card3").classList.remove("inactive");
+          document.getElementById("card1").classList.add("inactive");
+        } else if (x == 0) {
+          document.getElementById("card1").classList.remove("inactive");
+          document.getElementById("card2").classList.add("inactive");
+          document.getElementById("card3").classList.add("inactive");
+        } else {
+          x = 3;
+          previous();
+        }
+      }
+
+      function showNav() {
+        var menu = document.getElementsByClassName("navigation-items")[0];
+        menu.classList.toggle("show");
+      }
+
+      var el = document.createElement("script");
+      el.setAttribute("src", "https://static.axept.io/sdk.js");
+      el.setAttribute("type", "text/javascript");
+      el.setAttribute("async", true);
+      el.setAttribute("data-id", "5e91eb5e515671057d14a8b4");
+      el.setAttribute("data-cookies-version", "ga_only");
+      if (document.body !== null) {
+        document.body.appendChild(el);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TVZPCX8');</script>
+	<!-- End Google Tag Manager -->
+	<title>LazyDB Documentation</title>
+	<meta charset="utf-8">
+	<meta lang="en">
+	<link rel="icon" href="../images/logo.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<script src="highlight.pack.js"></script>
+	<script src="js/redom.js"></script>
+	<script>
+    	const { el, mount,router } = redom;
+	</script>
+	<script type="text/javascript" src="js/docObject.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script src="https://kit.fontawesome.com/acc215a270.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVZPCX8"
+				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<nav id="nav">
+		<h1><a href="../" id="noa">LazyDB</a></h1>
+		
+	</nav>
+	<section id="section">
+	</section>
+
+<script type="text/javascript">
+	var el = document.createElement('script');
+	el.setAttribute('src', 'https://static.axept.io/sdk.js');
+	el.setAttribute('type', 'text/javascript');
+	el.setAttribute('async', true);
+	el.setAttribute('data-id', '5e91eb5e515671057d14a8b4');
+	el.setAttribute('data-cookies-version', 'ga_only');
+	if (document.body !== null) {
+		document.body.appendChild(el);
+	}
+</script>
+<script>
+	for (var i = 0; i < data.length; i++) {
+		mount(document.getElementById("section"),data[i].el);
+	}
+	let menu = [];
+	let currentMenu = undefined;
+	for (let i = 0; i < data.length; i++) {
+		const tag = data[i].el.tagName;
+		const title = data[i].el.children[0];
+		if(tag === "H1"){
+			if(currentMenu){
+				menu.push(new subMenu(currentMenu.title,currentMenu.sub));
+			}
+			currentMenu = {
+				title: data[i].el.innerText.toLowerCase(),
+				sub: []
+			}
+		}else{
+			currentMenu.sub.push(title.innerText.toLowerCase());
+		}
+
+		if(i === data.length - 1){
+			menu.push(new subMenu(currentMenu.title,currentMenu.sub));
+		}
+	}
+
+
+	for (var i = 0; i < menu.length; i++) {
+		mount(document.getElementById("nav"),menu[i]);
+	}
+
+	document.body.onscroll = function(e){
+		const scroll = window.scrollY;
+		let selectedTitle = data[0].el;
+		let selectedSubTitle = data[1].el.children[0];
+
+		for (let i = 0; i < data.length; i++) {
+			if(data[i].el.tagName === "H1"){
+				if(data[i].el.offsetTop <= scroll){
+					selectedTitle = data[i].el;
+				}
+			}else if(data[i].el.tagName === "DIV"){
+				if(data[i].el.children[0].offsetTop <= scroll){
+					selectedSubTitle = data[i].el.children[0];
+				}
+			}
+		}
+
+
+		for (var i = 0; i < menu.length; i++) {
+			const menuTitle = menu[i].nameEL.innerText.toLowerCase();
+			if(menuTitle === selectedTitle.innerText.toLowerCase()){
+				initMenus();
+				menu[i].nameEL.className = 'current';
+				menu[i].subMenu.style.height = menu[i].subMenu.children.length * 33 + "px";
+
+				for (var j = 0; j < menu[i].subMenu.children.length; j++) {
+					const currentEl =  menu[i].subMenu.children[j];
+					if(currentEl.innerText.toLowerCase() === selectedSubTitle.innerText.toLowerCase()){
+						initSubMenus();
+						currentEl.className = "current";
+						break;
+					}
+				}
+				break;
+			}
+		}
+	};
+</script>
+</body>

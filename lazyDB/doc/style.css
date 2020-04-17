@@ -1,0 +1,270 @@
+body{
+    padding:0;
+    margin: 0;
+    background-color: #fff;
+}
+
+nav{
+    display: block;
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    background-color: #3594f2;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 0;
+    top: 0;
+}
+
+nav h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 30px;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #3594f2;
+    font-size: 34px;
+    width: 95%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 120px;
+    border-top: #3594f2 1px solid;
+}
+
+a{
+    color: #fff;
+}
+h1:first-of-type{
+    border: 0;
+    margin-top: 10px;
+}
+
+#noa{
+    line-height: 0;
+    cursor: pointer;
+    width: 100%;
+    margin-left: 0;
+    transition: 0;
+    border-left: 0;
+    font-size: 24px;
+}
+#noa:hover{
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+nav a{
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    width: calc(100% - 15px);
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: padding-left 0.3s;
+    border-left: 0px #fff solid;
+    text-transform: capitalize;
+}
+
+nav a:hover,
+nav a.current{
+    padding-left: 15px;
+    border-left: 2px #fff solid;
+}
+
+div nav{
+    position: relative;
+    width: 100%;
+    overflow:hidden;
+    transition: all 0.4s;
+}
+
+div nav a{
+    line-height: 32px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border: 0;
+    border-bottom: 1px #fff solid;
+    width: 0;
+    overflow: visible;
+    display: block;
+    padding: 0;
+    white-space: nowrap;
+    margin-left: 40px;
+    transition: width 0.4s;
+
+}
+
+div nav a:hover,
+div nav a.current{
+    border-bottom: 1px #fff solid;
+    width: 100%;
+    padding: 0;
+    border-left: 0;
+}
+
+
+section{
+    width: calc(100% - 200px - 5%);
+    margin-left: calc(200px + 5%);
+    padding-bottom: 30px;
+}
+
+
+h2{
+    margin-top: 40px;
+    color: #3594f2;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+    font-size: 28px;
+    margin-bottom: 1vw;
+}
+
+.text{
+    width: 40%;
+    display: inline-block;
+    color: #666;
+    font-family: Montserrat;
+    vertical-align: top;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.text.large{
+    width: 95%;
+}
+
+.code{
+    display: inline-block;
+    width: 50%;
+    margin-left: 5%;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.code i{
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    z-index: 5;
+    right: 5%;
+    line-height: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.code nav{
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+
+
+.code nav a{
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    font-family: Montserrat;
+    border-bottom: solid 6px rgba(0,0,0,0);
+    margin-left: 0;
+    text-transform: uppercase;
+    border-left: 0;
+    border-bottom: 0;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 28px;
+    height: 28px;
+}
+
+.code nav a:hover,
+.code nav a.current{
+    width: auto;
+    border-bottom: solid 6px #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-left: 0;
+}
+
+.code nav a.current:first-of-type,
+.code nav a:first-of-type{
+    border-left: 0;
+}
+
+.code pre code{
+    padding: 1vw;
+    color: #666;
+    width: calc(100% - 2vw);
+    overflow: auto;
+    font-size: 14px;
+    font-family: 'Muli';
+}
+
+.warn{
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    margin-top: 2vw;
+    padding: .5vw;
+    align-items: center;
+}
+
+.warn i{
+    font-size: 24px;
+    width: 54px;
+    text-align: center;
+    float: left;
+    height: 100%;
+    display: inline-block;
+    line-height: 34px;
+}
+.warn p{
+    margin: 0;
+    width: calc(100% - 64px);
+    display: inline-block;
+}
+
+@media screen and (max-width: 1024px) {
+
+    section{
+        width: calc(100% - 300px);
+        margin-left: 250px;
+    }
+    .text{
+        width: 100%;
+    }
+
+    .code i{
+        right: 60px;
+    }
+
+    .code{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .warn {
+        width: 100%;
+        margin-left: 0;
+    }
+}
